@@ -7,6 +7,51 @@
 <meta name="theme-color" content="#0E0B2E">
 <title>MacLorian X Group · Empresa de tecnología</title>
 
+<link rel="canonical" href="https://maclorianxgroup.com/">
+<link rel="icon" type="image/svg+xml" href="/assets/logos/maclorian-x-group.svg">
+
+<!-- Sin estas etiquetas, compartir el sitio (inversores, partners, prensa)
+     mostraba una tarjeta pelada sin título ni imagen — justo en el dominio
+     cuyo trabajo es transmitir credibilidad. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MacLorian X Group">
+<meta property="og:locale" content="es_US">
+<meta property="og:url" content="https://maclorianxgroup.com/">
+<meta property="og:title" content="MacLorian X Group · Empresa de tecnología">
+<meta property="og:description" content="Empresa de tecnología con sede en Florida (EE. UU.). Desarrollo de aplicaciones móviles y plataformas digitales en educación financiera, logística y servicios.">
+<meta property="og:image" content="https://maclorianxgroup.com/assets/logos/maclorian-x-group.svg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MacLorian X Group · Empresa de tecnología">
+<meta name="twitter:description" content="Empresa de tecnología con sede en Florida (EE. UU.). Aplicaciones móviles y plataformas digitales.">
+
+<!-- Organization: da a los buscadores los datos verificables de la entidad
+     legal (razón social, sede, fundador), que es la señal de confianza que
+     una web corporativa necesita y no puede transmitir solo con diseño. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "MacLorian X Group",
+  "legalName": "MacLorian X Group LLC",
+  "url": "https://maclorianxgroup.com/",
+  "logo": "https://maclorianxgroup.com/assets/logos/maclorian-x-group.svg",
+  "foundingDate": "2026-03",
+  "founder": { "@type": "Person", "name": "Miguel Angel Balart Batlle" },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Cape Coral",
+    "addressRegion": "FL",
+    "addressCountry": "US"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "contact@maclorianxgroup.com",
+    "availableLanguage": ["Spanish", "English"]
+  }
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
@@ -543,6 +588,21 @@ footer a:hover { color: var(--violet-light); }
 .block:nth-of-type(2) { animation-delay: 0.1s; }
 .block:nth-of-type(3) { animation-delay: 0.2s; }
 .block:nth-of-type(4) { animation-delay: 0.3s; }
+
+/* Quien activa "reducir movimiento" en su sistema suele hacerlo por trastornos
+   vestibulares o migrañas: las animaciones le provocan mareo real (WCAG 2.3.3).
+   El contenido se muestra igual, sin desplazamiento ni desvanecido.
+   `backwards` en la animación mantenía los bloques invisibles hasta que corría,
+   así que sin esta regla un usuario con motion reducido podía no ver nada. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .hero, .block { animation: none !important; opacity: 1 !important; transform: none !important; }
+}
 </style>
 </head>
 <body>
@@ -550,7 +610,7 @@ footer a:hover { color: var(--violet-light); }
 <header class="site-header">
   <div class="header-inner">
     <a href="#" class="brand">
-      <img src="/assets/logos/maclorian-x-group.png" alt="" class="brand-mark" width="32" height="32">
+      <img src="/assets/logos/maclorian-x-group.svg" alt="" class="brand-mark" width="32" height="32">
       <span data-i18n="brand">MacLorian X Group</span>
     </a>
     <div class="lang-toggle">
@@ -581,7 +641,7 @@ footer a:hover { color: var(--violet-light); }
 
       <div class="product">
         <div class="product-header">
-          <div class="product-icon"><img src="/assets/logos/deduth-academy.png" alt="DEDUTH ACADEMY" loading="lazy"></div>
+          <div class="product-icon"><img src="/assets/logos/deduth-academy.svg" alt="DEDUTH ACADEMY" loading="lazy"></div>
           <span class="product-status live" data-i18n="status-live">Activo</span>
         </div>
         <div>
@@ -598,7 +658,7 @@ footer a:hover { color: var(--violet-light); }
 
       <div class="product">
         <div class="product-header">
-          <div class="product-icon"><img src="/assets/logos/deduth-kids.png" alt="DEDUTH ACADEMY KIDS" loading="lazy"></div>
+          <div class="product-icon"><img src="/assets/logos/deduth-kids.svg" alt="DEDUTH ACADEMY KIDS" loading="lazy"></div>
           <span class="product-status soon" data-i18n="status-soon">Próximamente</span>
         </div>
         <div>
@@ -614,7 +674,7 @@ footer a:hover { color: var(--violet-light); }
 
       <div class="product">
         <div class="product-header">
-          <div class="product-icon"><img src="/assets/logos/traslapp.png" alt="TRASLAPP" loading="lazy"></div>
+          <div class="product-icon"><img src="/assets/logos/traslapp.svg" alt="TRASLAPP" loading="lazy"></div>
           <span class="product-status dev" data-i18n="status-dev">En desarrollo</span>
         </div>
         <div>
