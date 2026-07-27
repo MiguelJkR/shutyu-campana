@@ -2,6 +2,39 @@
 (function() {
   const STORAGE_KEY = 'mclx_cookie_consent_v1';
   const CONSENT_EXPIRY_DAYS = 365;
+
+  // Los textos estaban en duro en español. Con la versión inglesa del sitio ya
+  // prerenderizada en /en/, eso dejaba al visitante angloparlante aceptando un
+  // aviso que no puede leer — que es exactamente lo que el consentimiento
+  // informado no es. Sigue el idioma del documento, no el del navegador: la
+  // página que se está leyendo manda.
+  const STRINGS = {
+    es: {
+      bannerTitle: 'Usamos cookies',
+      bannerBody: 'Las esenciales son necesarias para el sitio. Las de analytics y marketing son opcionales — vos elegís. Ver ',
+      privacy: 'Política de Privacidad',
+      reject: 'Solo esenciales', customize: 'Personalizar', accept: 'Aceptar todas',
+      modalTitle: 'Preferencias de cookies',
+      modalBody: 'Elegí qué tipos de cookies aceptás. Las esenciales no se pueden desactivar.',
+      essential: 'Esenciales', essentialDesc: 'Login, sesión, security. Sin estas el sitio no funciona.',
+      analytics: 'Analytics', analyticsDesc: 'Datos agregados anónimos para mejorar el producto.',
+      marketing: 'Marketing', marketingDesc: 'Recordar preferencias para campañas. Sin tracking cross-site.',
+      cancel: 'Cancelar', save: 'Guardar'
+    },
+    en: {
+      bannerTitle: 'We use cookies',
+      bannerBody: 'Essential ones are required for the site. Analytics and marketing are optional — your call. See our ',
+      privacy: 'Privacy Policy',
+      reject: 'Essential only', customize: 'Customize', accept: 'Accept all',
+      modalTitle: 'Cookie preferences',
+      modalBody: 'Choose which cookies you accept. Essential ones cannot be turned off.',
+      essential: 'Essential', essentialDesc: 'Login, session, security. The site does not work without these.',
+      analytics: 'Analytics', analyticsDesc: 'Anonymous aggregated data to improve the product.',
+      marketing: 'Marketing', marketingDesc: 'Remembering preferences for campaigns. No cross-site tracking.',
+      cancel: 'Cancel', save: 'Save'
+    }
+  };
+  const T = STRINGS[(document.documentElement.lang || 'es').slice(0, 2)] || STRINGS.es;
   function getConsent() {
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
@@ -39,13 +72,13 @@
     banner.innerHTML = `
       <div class="mclx-cc-inner">
         <div class="mclx-cc-text">
-          <strong>Usamos cookies</strong>
-          <p>Las esenciales son necesarias para el sitio. Las de analytics y marketing son opcionales — vos elegís. Ver <a href="/privacy">Política de Privacidad</a>.</p>
+          <strong>${T.bannerTitle}</strong>
+          <p>${T.bannerBody}<a href="/privacy">${T.privacy}</a>.</p>
         </div>
         <div class="mclx-cc-actions">
-          <button id="mclx-cc-reject" class="mclx-cc-btn mclx-cc-btn-secondary" type="button">Solo esenciales</button>
-          <button id="mclx-cc-customize" class="mclx-cc-btn mclx-cc-btn-secondary" type="button">Personalizar</button>
-          <button id="mclx-cc-accept" class="mclx-cc-btn mclx-cc-btn-primary" type="button">Aceptar todas</button>
+          <button id="mclx-cc-reject" class="mclx-cc-btn mclx-cc-btn-secondary" type="button">${T.reject}</button>
+          <button id="mclx-cc-customize" class="mclx-cc-btn mclx-cc-btn-secondary" type="button">${T.customize}</button>
+          <button id="mclx-cc-accept" class="mclx-cc-btn mclx-cc-btn-primary" type="button">${T.accept}</button>
         </div>
       </div>`;
     document.body.appendChild(banner);
@@ -59,25 +92,25 @@
     modal.innerHTML = `
       <div class="mclx-mod-backdrop"></div>
       <div class="mclx-mod-card">
-        <h3>Preferencias de cookies</h3>
-        <p>Elegí qué tipos de cookies aceptás. Las esenciales no se pueden desactivar.</p>
+        <h3>${T.modalTitle}</h3>
+        <p>${T.modalBody}</p>
         <div class="mclx-cat">
           <label class="mclx-cat-row">
             <input type="checkbox" checked disabled>
-            <div><strong>Esenciales</strong><small>Login, sesión, security. Sin estas el sitio no funciona.</small></div>
+            <div><strong>${T.essential}</strong><small>${T.essentialDesc}</small></div>
           </label>
           <label class="mclx-cat-row">
             <input type="checkbox" id="mclx-mod-analytics">
-            <div><strong>Analytics</strong><small>Datos agregados anónimos para mejorar el producto.</small></div>
+            <div><strong>${T.analytics}</strong><small>${T.analyticsDesc}</small></div>
           </label>
           <label class="mclx-cat-row">
             <input type="checkbox" id="mclx-mod-marketing">
-            <div><strong>Marketing</strong><small>Recordar preferencias para campañas. Sin tracking cross-site.</small></div>
+            <div><strong>${T.marketing}</strong><small>${T.marketingDesc}</small></div>
           </label>
         </div>
         <div class="mclx-mod-actions">
-          <button id="mclx-mod-cancel" class="mclx-cc-btn mclx-cc-btn-secondary" type="button">Cancelar</button>
-          <button id="mclx-mod-save" class="mclx-cc-btn mclx-cc-btn-primary" type="button">Guardar</button>
+          <button id="mclx-mod-cancel" class="mclx-cc-btn mclx-cc-btn-secondary" type="button">${T.cancel}</button>
+          <button id="mclx-mod-save" class="mclx-cc-btn mclx-cc-btn-primary" type="button">${T.save}</button>
         </div>
       </div>`;
     document.body.appendChild(modal);
