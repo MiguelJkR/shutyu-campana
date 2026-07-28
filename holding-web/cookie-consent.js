@@ -65,10 +65,55 @@
       });
     }
   }
+  const FOCUSABLES =
+    'a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
+  /**
+   * Atrapa el tabulador dentro del elemento y devuelve una función para soltarlo.
+   *
+   * El modal de preferencias se pinta sobre un backdrop, así que visualmente
+   * bloquea la página — pero el tabulador seguía saliéndose por detrás, hacia
+   * controles que el usuario no ve. Quien navega con teclado se perdía.
+   */
+  function atraparFoco(contenedor, alSalir) {
+    const previo = document.activeElement;
+    function onKey(e) {
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        alSalir();
+        return;
+      }
+      if (e.key !== 'Tab') return;
+      const items = contenedor.querySelectorAll(FOCUSABLES);
+      if (!items.length) return;
+      const primero = items[0];
+      const ultimo = items[items.length - 1];
+      if (e.shiftKey && document.activeElement === primero) {
+        e.preventDefault();
+        ultimo.focus();
+      } else if (!e.shiftKey && document.activeElement === ultimo) {
+        e.preventDefault();
+        primero.focus();
+      }
+    }
+    document.addEventListener('keydown', onKey, true);
+    const primerControl = contenedor.querySelector(FOCUSABLES);
+    if (primerControl) primerControl.focus();
+    return function soltar() {
+      document.removeEventListener('keydown', onKey, true);
+      // Devuelve el foco a donde estaba, no al principio de la página.
+      if (previo && typeof previo.focus === 'function') previo.focus();
+    };
+  }
+
   function buildBanner() {
     const banner = document.createElement('div');
     banner.id = 'mclx-cookie-banner';
+    // Sin `aria-modal` y sin Escape a propósito: el banner NO bloquea la página,
+    // y cerrarlo con Escape sería registrar una decisión de consentimiento que
+    // el usuario no tomó. Para decidir hay que pulsar uno de los tres botones.
     banner.setAttribute('role', 'dialog');
+    banner.setAttribute('aria-label', T.bannerTitle);
     banner.innerHTML = `
       <div class="mclx-cc-inner">
         <div class="mclx-cc-text">
@@ -89,6 +134,10 @@
   function buildModal() {
     const modal = document.createElement('div');
     modal.id = 'mclx-cookie-modal';
+    // Este sí es modal: hay backdrop y bloquea la interacción con la página.
+    modal.setAttribute('role', 'dialog');
+    modal.setAttribute('aria-modal', 'true');
+    modal.setAttribute('aria-label', T.modalTitle);
     modal.innerHTML = `
       <div class="mclx-mod-backdrop"></div>
       <div class="mclx-mod-card">
@@ -114,9 +163,16 @@
         </div>
       </div>`;
     document.body.appendChild(modal);
-    document.getElementById('mclx-mod-cancel').addEventListener('click', () => { modal.remove(); buildBanner(); });
+    // Escape equivale a Cancelar: vuelve al banner sin registrar decisión.
+    const soltarFoco = atraparFoco(modal.querySelector('.mclx-mod-card'), () => {
+      soltarFoco();
+      modal.remove();
+      buildBanner();
+    });
+    document.getElementById('mclx-mod-cancel').addEventListener('click', () => { soltarFoco(); modal.remove(); buildBanner(); });
     document.getElementById('mclx-mod-save').addEventListener('click', () => {
       saveConsent(document.getElementById('mclx-mod-analytics').checked, document.getElementById('mclx-mod-marketing').checked);
+      soltarFoco();
       modal.remove();
     });
   }
