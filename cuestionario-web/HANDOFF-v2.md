@@ -11,7 +11,7 @@
 ## 1. Contexto del proyecto (resumen)
 
 - **Founder:** Miguel Angel Balart Batlle, MacLorian X Group LLC, Cape Coral FL
-- **Producto:** App de Membresías por Invitación — marketplace de servicios de property care en SW Florida con bundles multi-categoría (lawn + roof + pool + A/C + pressure washing). Comisión 10% sobre GMV.
+- **Producto:** App de Membresías por Invitación — marketplace de servicios de property care en SW Florida con bundles multi-categoría (lawn + roof + pool + A/C + pressure washing). Comisión de $1,70 por socio y mes, con tope del 50% del cobro (sustituyó al 10% sobre GMV el 2026-08-03).
 - **Stack:** vanilla HTML/CSS/JS frontend + Vercel Functions (Node 18+) + Notion API como DB
 - **Estado:** validación pre-MVP, decisión go/no-go al día 15 con 20 entrevistas
 - **Mercado piloto:** Cape Coral / SW Florida

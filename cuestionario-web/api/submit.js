@@ -822,6 +822,9 @@ export const PROP_MAP = {
   p_seasonality: ['P Estacionalidad', SEL], p_pain_story: ['P Historia dolor', RT],
   p_reaction: ['P Reacción', SEL], p_reaction_why: ['P Reacción por qué', RT],
   p_model_pref: ['P Modelo preferido', SEL], p_model_pref_why: ['P Modelo por qué', RT],
+  // El nombre de la propiedad en Notion NO se renombra aunque la pregunta ya no diga 10%:
+  // renombrarla crea columnas nuevas y parte el historico de respuestas en dos. Lo que se
+  // pregunta hoy es $1,70 por socio y mes; lo respondido antes del 2026-08-11, el 10%.
   p_fee_10: ['P Comisión 10%', SEL], p_fee_10_incl: ['P 10% qué incluiría', RT],
   p_bundle_price: ['P Precio bundle', SEL], p_vw_expensive: ['P VW caro', NUM],
   p_vw_bargain: ['P VW ganga', NUM], p_blockers: ['P Frenos', MULTI],
