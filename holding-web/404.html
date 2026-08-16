@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0E0B2E">
+<title>Página no encontrada · MacLorian X Group</title>
+<meta name="description" content="La página que buscas no existe en maclorianxgroup.com.">
+
+<!-- Una página de error no compite por indexarse. -->
+<meta name="robots" content="noindex,follow">
+
+<link rel="icon" type="image/svg+xml" href="/assets/logos/maclorian-x-group.svg">
+<link rel="stylesheet" href="/assets/fonts/fonts.css">
+<style>
+  :root {
+    --paper: #0E0B2E;
+    --ink: #FFFFFF;
+    --ink-soft: #B8B5D6;
+    --ink-mute: #807FA6;
+    --violet-light: #A78BFA;
+    --gradient-cta: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 50%, #A855F7 100%);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "DM Sans", system-ui, -apple-system, sans-serif;
+    text-align: center;
+  }
+  .marca { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 40px; }
+  .marca img { width: 32px; height: 32px; }
+  .marca span { font-size: 15px; font-weight: 500; color: var(--ink-soft); }
+  h1 { font-family: "Fraunces", Georgia, serif; font-size: clamp(40px, 9vw, 64px); margin: 0; line-height: 1; }
+  p { margin: 16px auto 0; max-width: 42ch; font-size: 16px; line-height: 1.6; color: var(--ink-soft); }
+  .acciones { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  /* `padding` generoso a propósito: el mínimo de WCAG 2.2 SC 2.5.8 es 24×24 y
+     un enlace de texto pelado se queda en la altura de la línea. */
+  a {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: filter 0.2s;
+  }
+  a:hover { filter: brightness(1.15); }
+  a:focus-visible { outline: 2px solid var(--violet-light); outline-offset: 3px; }
+  .principal { background: var(--gradient-cta); color: #fff; }
+  .secundario { border: 1px solid rgba(255,255,255,0.14); color: var(--ink-soft); }
+  small { display: block; margin-top: 40px; font-size: 13px; color: var(--ink-mute); }
+</style>
+</head>
+<body>
+  <main>
+    <span class="marca">
+      <img src="/assets/logos/maclorian-x-group.svg" alt="" width="32" height="32">
+      <span>MacLorian X Group</span>
+    </span>
+
+    <h1>404</h1>
+    <p>Esta página no existe. Puede que el enlace esté mal escrito o que la hayamos movido.</p>
+
+    <div class="acciones">
+      <a class="principal" href="/">Ir al inicio</a>
+      <a class="secundario" href="/en">English</a>
+    </div>
+
+    <small>MacLorian X Group LLC · Cape Coral, Florida, EE. UU.</small>
+  </main>
+</body>
+</html>
