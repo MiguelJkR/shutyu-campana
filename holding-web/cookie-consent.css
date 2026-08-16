@@ -29,7 +29,10 @@
   border-radius: 8px; border: none; cursor: pointer;
 }
 .mclx-cc-btn:focus-visible { outline: 2px solid #A78BFA; outline-offset: 2px; }
-.mclx-cc-btn-primary { background: #8B5CF6; color: #ffffff; }
+/* #7C3AED y no #8B5CF6: el blanco sobre el violeta claro daba 4.23:1 y AA
+   pide 4.5 para texto de 13px. Este da 5.70:1 y es el mismo violeta un paso
+   mas oscuro, asi que la marca no se mueve. */
+.mclx-cc-btn-primary { background: #7C3AED; color: #ffffff; }
 .mclx-cc-btn-primary:hover { background: #A78BFA; }
 .mclx-cc-btn-secondary { background: rgba(255, 255, 255, 0.08); color: #ffffff; }
 .mclx-cc-btn-secondary:hover { background: rgba(255, 255, 255, 0.14); }
