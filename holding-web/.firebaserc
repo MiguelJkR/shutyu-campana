@@ -1,0 +1,12 @@
+{
+  "projects": {
+    "default": "shutyu"
+  },
+  "targets": {
+    "shutyu": {
+      "hosting": {
+        "maclorian-holding": ["maclorian-holding"]
+      }
+    }
+  }
+}
