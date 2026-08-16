@@ -29,8 +29,14 @@
 <meta property="og:url" content="https://maclorianxgroup.com/en">
 <meta property="og:title" content="MacLorian X Group · Technology company">
 <meta property="og:description" content="Technology company headquartered in Florida, USA. Mobile applications and digital platforms in financial education, logistics, and services.">
-<meta property="og:image" content="https://maclorianxgroup.com/assets/logos/maclorian-x-group.svg">
-<meta name="twitter:card" content="summary">
+<!-- PNG y no SVG: ninguna red social pinta SVG en la tarjeta, asi que la
+     vista previa salia vacia justo en el dominio cuyo trabajo es dar credibilidad.
+     1376x768 es proporcion apaisada, que es la que pide summary_large_image. -->
+<meta property="og:image" content="https://maclorianxgroup.com/assets/logos/maclorian-x-group.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1376">
+<meta property="og:image:height" content="768">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MacLorian X Group · Technology company">
 <meta name="twitter:description" content="Technology company headquartered in Florida, USA. Mobile applications and digital platforms.">
 
@@ -623,7 +629,7 @@ footer a:hover { color: var(--violet-light); }
 
 <header class="site-header">
   <div class="header-inner">
-    <a href="#" class="brand">
+    <a href="/en" class="brand">
       <img src="/assets/logos/maclorian-x-group.svg" alt="" class="brand-mark" width="32" height="32">
       <span data-i18n="brand">MacLorian X Group</span>
     </a>
