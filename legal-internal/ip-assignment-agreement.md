@@ -1,5 +1,5 @@
 # IP ASSIGNMENT AGREEMENT
-## Miguel Angel Balart Batlle → MacLorian-X-Group LLC
+## Miguel Ángel Balart Batlle → MacLorian-X-Group LLC
 
 ### Asignación de Propiedad Intelectual creada antes y después de la formación de la LLC
 
@@ -15,7 +15,7 @@
 ## ARTÍCULO I — PARTES
 
 ### 1.1 Asignante (Assignor)
-**Nombre**: Miguel Angel Balart Batlle
+**Nombre**: Miguel Ángel Balart Batlle
 **Capacidad**: Persona física, founder y único Member de MacLorian-X-Group LLC
 **Dirección**: Cape Coral, Florida, USA
 **Email**: contact@maclorianxgroup.com
@@ -82,8 +82,8 @@ Esta consideración se considera adecuada y suficiente.
 - Survey/cuestionario questions y validation frameworks
 
 **Marcas comerciales y nombres**:
-- Nombres comerciales: "MacLorian-X-Group", "DEDUTH ACADEMY", "DEDUTH KIDS", "TRASLAPP", "App Membresías por Invitación"
-- Slogans y taglines: "Convierte tu servicio en una membresía", "Tu plata. Tu juego. Tu nivel.", etc.
+- Nombres comerciales: "MacLorian-X-Group", "DEDUTH ACADEMY", "DEDUTH KIDS", "TRASLAPP", "Shutyu", "App Membresías por Invitación" (denominación anterior de Shutyu)
+- Slogans y taglines: "Convierte tu servicio en una membresía", "Tu dinero. Tu juego. Tu nivel." (vigente desde agosto de 2026), "Tu plata. Tu juego. Tu nivel." (anterior, usado públicamente hasta esa fecha), "Aprender a manejar el dinero jugando, desde pequeños" (vigente), "Aprender de plata, jugando" (anterior), etc.
 - Domains: maclorianxgroup.com, deduthacademy.com, traslapp.com (cuando se registre), kids.deduthacademy.com
 - Trademark applications USPTO (cuando se presenten)
 
