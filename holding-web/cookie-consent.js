@@ -11,14 +11,14 @@
   const STRINGS = {
     es: {
       bannerTitle: 'Usamos cookies',
-      bannerBody: 'Las esenciales son necesarias para el sitio. Las de analytics y marketing son opcionales — vos elegís. Ver ',
+      bannerBody: 'Las esenciales son necesarias para el sitio. Las de analítica y de marketing son opcionales: tú decides. Consulta ',
       privacy: 'Política de Privacidad',
       reject: 'Solo esenciales', customize: 'Personalizar', accept: 'Aceptar todas',
       modalTitle: 'Preferencias de cookies',
-      modalBody: 'Elegí qué tipos de cookies aceptás. Las esenciales no se pueden desactivar.',
-      essential: 'Esenciales', essentialDesc: 'Login, sesión, security. Sin estas el sitio no funciona.',
-      analytics: 'Analytics', analyticsDesc: 'Datos agregados anónimos para mejorar el producto.',
-      marketing: 'Marketing', marketingDesc: 'Recordar preferencias para campañas. Sin tracking cross-site.',
+      modalBody: 'Elige qué tipos de cookies aceptas. Las esenciales no se pueden desactivar.',
+      essential: 'Esenciales', essentialDesc: 'Inicio de sesión, sesión activa y seguridad. Sin estas el sitio no funciona.',
+      analytics: 'Analítica', analyticsDesc: 'Datos agregados y anónimos para mejorar el producto.',
+      marketing: 'Marketing', marketingDesc: 'Recordar preferencias para campañas. Sin rastreo entre sitios.',
       cancel: 'Cancelar', save: 'Guardar'
     },
     en: {
