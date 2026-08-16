@@ -10,10 +10,59 @@
 <meta property="og:type" content="website">
 <title>TRASLAPP · El Uber de los materiales de construcción</title>
 
+<!-- Faltaban las tres. Sin canonical la pagina se declaraba lo que Google
+     quisiera; sin og:url y og:image, compartir el enlace mostraba una tarjeta
+     sin destino ni imagen. -->
+<link rel="canonical" href="https://traslapp-marketing.vercel.app/">
+<meta property="og:url" content="https://traslapp-marketing.vercel.app/">
+<meta property="og:site_name" content="TRASLAPP">
+<meta property="og:image" content="https://traslapp-marketing.vercel.app/assets/logos/traslapp.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="TRASLAPP · El Uber de los materiales de construcción">
+<meta name="twitter:description" content="Pedí material directo a la obra, sin llamar a 5 transportistas.">
+
+<!-- Sin esto, Google no sabia que hay una empresa detras ni con que marca
+     asociar el dominio. Se declara la organizacion y el sitio, y nada mas:
+     `Product`, `Offer` o `Rating` serian afirmaciones sobre un servicio que
+     todavia esta en piloto. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "TRASLAPP",
+      "legalName": "MacLorian X Group LLC",
+      "url": "https://traslapp-marketing.vercel.app/",
+      "logo": "https://traslapp-marketing.vercel.app/assets/logos/traslapp.svg",
+      "parentOrganization": { "@type": "Organization", "name": "MacLorian X Group LLC" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cape Coral",
+        "addressRegion": "FL",
+        "addressCountry": "US"
+      },
+      "email": "contact@maclorianxgroup.com",
+      "telephone": "+1-239-281-3073"
+    },
+    {
+      "@type": "WebSite",
+      "name": "TRASLAPP",
+      "url": "https://traslapp-marketing.vercel.app/",
+      "inLanguage": ["es", "en"],
+      "publisher": { "@type": "Organization", "name": "MacLorian X Group LLC" }
+    }
+  ]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
-<link rel="icon" type="image/png" href="/assets/logos/traslapp.png">
+<!-- SVG (1,5 KB) en vez del PNG (659 KB): el mismo patron que ya se corrigio
+     en kids en la auditoria de julio. -->
+<link rel="icon" type="image/svg+xml" href="/assets/logos/traslapp.svg">
 
 <style>
 :root {
@@ -260,7 +309,7 @@ footer .holding-link { font-style: italic; color: var(--orange-light); }
 
 <header class="site-header">
   <div class="header-inner">
-    <a href="#" class="brand" aria-label="TRASLAPP">
+    <a href="/" class="brand" aria-label="TRASLAPP">
       <img src="/assets/logos/traslapp.png" alt="" class="brand-mark" width="36" height="36">
       <div class="brand-text">
         <span class="brand-name">TRASLAPP</span>
@@ -397,7 +446,7 @@ footer .holding-link { font-style: italic; color: var(--orange-light); }
 
 <footer class="site-footer">
   <p>© 2026 TRASLAPP · Una división de <a href="https://maclorianxgroup.com" class="holding-link">MacLorian X Group LLC</a> · Cape Coral, FL</p>
-  <p class="footer-meta"><a href="mailto:contact@maclorianxgroup.com">contact@maclorianxgroup.com</a> · <a href="tel:+12392813073">+1 (239) 281-3073</a></p>
+  <p class="footer-meta"><a href="mailto:contact@maclorianxgroup.com">contact@maclorianxgroup.com</a> · <a href="tel:+12392813073">+1 (239) 281-3073</a> · <a href="https://maclorianxgroup.com/privacy">Política de privacidad</a></p>
 </footer>
 
 <script>

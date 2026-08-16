@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0F1735">
+<title>Página no encontrada · TRASLAPP</title>
+<meta name="description" content="La página que buscas no existe en TRASLAPP.">
+
+<!-- Una página de error no compite por indexarse. -->
+<meta name="robots" content="noindex,follow">
+
+<link rel="icon" type="image/svg+xml" href="/assets/logos/traslapp.svg">
+<style>
+  :root {
+    --paper: #0F1735;
+    --ink: #FFFFFF;
+    --ink-soft: #C5CAE0;
+    --ink-mute: #8A91B0;
+    --amber: #F2A03D;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "DM Sans", system-ui, -apple-system, sans-serif;
+    text-align: center;
+  }
+  .marca { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 40px; }
+  .marca img { width: 34px; height: 34px; }
+  .marca span { font-size: 15px; font-weight: 600; letter-spacing: 0.04em; color: var(--ink-soft); }
+  h1 { font-size: clamp(40px, 9vw, 64px); margin: 0; line-height: 1; }
+  p { margin: 16px auto 0; max-width: 42ch; font-size: 16px; line-height: 1.6; color: var(--ink-soft); }
+  /* `padding` generoso a propósito: el mínimo de WCAG 2.2 SC 2.5.8 es 24×24 y
+     un enlace de texto pelado se queda en la altura de la línea. */
+  a.boton {
+    display: inline-block;
+    margin-top: 32px;
+    padding: 13px 26px;
+    border-radius: 10px;
+    background: var(--amber);
+    color: #1A1206;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: filter 0.2s;
+  }
+  a.boton:hover { filter: brightness(1.1); }
+  a.boton:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+  small { display: block; margin-top: 40px; font-size: 13px; color: var(--ink-mute); }
+  small a { color: var(--ink-soft); }
+</style>
+</head>
+<body>
+  <main>
+    <span class="marca">
+      <img src="/assets/logos/traslapp.svg" alt="" width="34" height="34">
+      <span>TRASLAPP</span>
+    </span>
+
+    <h1>404</h1>
+    <p>Esta página no existe. Puede que el enlace esté mal escrito o que la hayamos movido.</p>
+
+    <a class="boton" href="/">Ir al inicio</a>
+
+    <small>
+      TRASLAPP · Una división de MacLorian X Group LLC · Cape Coral, FL ·
+      <a href="https://maclorianxgroup.com/privacy">Política de privacidad</a>
+    </small>
+  </main>
+</body>
+</html>
