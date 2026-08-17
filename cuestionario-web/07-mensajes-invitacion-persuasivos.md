@@ -59,7 +59,7 @@ Eso es lo que tienen que VER. Por eso el mensaje tiene que mostrarlo.
 > **Los números reales para Coral Ice:**
 > - Plan basic $129/mes → 50 clientes = **$6,450/mes recurrente** (achievable en 6 meses Cape Coral)
 > - Plan premium $189/mes → 100 clientes en 12-18 meses = **$18,900/mes**
-> - Comisión 10% → quedás con **~$5,800-$17,000/mes neto**
+> - Comisión $1,70 por socio y mes (50 socios = $85; 100 socios = $170) → quedás con **~$6,365-$18,730/mes neto**
 >
 > **Y como dueño de casa que ERES, también ganás:** Vos también tenés lawn, pool, pressure washing, gutter. Como member de la red MacLorian pagás $99/mes por TODO eso (lo que hoy te cuesta ~$280/mes separado). **Ahorrás $181/mes** en tu propia casa, además de los $5K+ que sumás.
 >

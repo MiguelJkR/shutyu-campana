@@ -83,7 +83,7 @@ footer a:hover { color: var(--accent); }
   <li><a href="#4">Cuentas: proveedor vs cliente</a></li>
   <li><a href="#5">Membresías y pagos</a></li>
   <li><a href="#6">Cancelaciones y reembolsos</a></li>
-  <li><a href="#7">Comisión del 10% y pagos a proveedores</a></li>
+  <li><a href="#7">Comisión de la plataforma y pagos a proveedores</a></li>
   <li><a href="#8">Responsabilidad por la calidad del servicio</a></li>
   <li><a href="#9">Reseñas y contenido de usuarios</a></li>
   <li><a href="#10">Disputes entre proveedor y cliente</a></li>
@@ -190,10 +190,10 @@ footer a:hover { color: var(--accent); }
   <li><strong>Chargeback fraudulento</strong>: penalización contra el customer + posible cierre de cuenta.</li>
 </ul>
 
-<h2 id="7">7. Comisión del 10% y pagos a proveedores</h2>
+<h2 id="7">7. Comisión de la plataforma y pagos a proveedores</h2>
 
 <h3>7.1 Comisión</h3>
-<p>MacLorian retiene <strong>10% sobre todo el GMV procesado en la plataforma</strong>: incluye membresías recurrentes y cualquier cargo extra que el cliente pague al proveedor a través de la plataforma (servicios adicionales, upgrades, una-vez).</p>
+<p>MacLorian retiene <strong>$1,70 por cada socio y mes</strong> activo del proveedor —un importe fijo, no un porcentaje— que <strong>nunca supera el 50% del cobro</strong>. Se descuenta en el momento del cobro mediante <code>application_fee</code> de Stripe. El proveedor es el <em>merchant of record</em>, así que las comisiones de procesamiento de Stripe corren por su cuenta.</p>
 
 <h3>7.2 Bypass de la plataforma</h3>
 <p>Si el proveedor cobra al cliente <strong>fuera de la plataforma</strong> servicios que originaron en ella (ej: cliente conoce al provider via la app y le paga aparte por nuevos servicios), el provider está incumpliendo estos Términos. Penalización: comisión retroactiva sobre el monto, y/o terminación de la cuenta. Ver <a href="/provider-agreement">Acuerdo de Proveedor</a> para detalles.</p>

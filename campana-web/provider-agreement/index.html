@@ -93,7 +93,7 @@ Ambas partes acuerdan los siguientes términos.
 <ol>
   <li><a href="#1">Naturaleza del relacionamiento</a></li>
   <li><a href="#2">Servicios del Proveedor</a></li>
-  <li><a href="#3">Comisión del 10% sobre GMV</a></li>
+  <li><a href="#3">Comisión: $1,70 por socio y mes</a></li>
   <li><a href="#4">Bypass / cobro fuera de la plataforma</a></li>
   <li><a href="#5">Payouts y reportes 1099-K</a></li>
   <li><a href="#6">Licencias, seguros y compliance</a></li>
@@ -138,13 +138,14 @@ Ambas partes acuerdan los siguientes términos.
   <li>El Proveedor puede operar simultáneamente en <strong>otras plataformas o canales propios</strong>. NO hay exclusividad.</li>
 </ul>
 
-<h2 id="3">3. Comisión del 10% sobre GMV</h2>
+<h2 id="3">3. Comisión: $1,70 por socio y mes</h2>
 <ul>
-  <li>MacLorian retiene <strong>10% (diez por ciento)</strong> sobre todo el GMV (Gross Merchandise Volume) procesado en la Plataforma para este Proveedor.</li>
-  <li>GMV incluye: membresías recurrentes, servicios extra, upgrades, propinas (si la plataforma las habilita), reactivaciones.</li>
-  <li>La comisión se descuenta automáticamente al momento del payout. El Proveedor recibe el 90% neto (después de impuestos aplicables al cliente, que ya están en el GMV).</li>
-  <li>Procesamiento de pago de Stripe (~2.9% + $0.30 per transaction): asumido por la Plataforma a partir de su 10% (no se descuenta adicionalmente al provider).</li>
-  <li>MacLorian puede cambiar el porcentaje de comisión con <strong>60 días de aviso</strong> previo. El Proveedor puede salir antes de la fecha efectiva sin penalidad.</li>
+  <li>MacLorian retiene <strong>$1,70 (un dólar con setenta centavos) por cada socio y mes</strong> activo del Proveedor en la Plataforma. Es un <strong>importe fijo</strong>, no un porcentaje del precio del plan.</li>
+  <li>La comisión <strong>nunca supera el 50% del cobro</strong>. En un plan de $2/mes, $1,70 sería el 85%: el tope existe para que la comisión no se coma un plan barato.</li>
+  <li>Se denomina por socio y <strong>mes</strong>, no por cobro. Si el Proveedor factura anualmente, la comisión de ese cobro es la de los doce meses que cubre.</li>
+  <li>La comisión se descuenta automáticamente en el momento del cobro (<code>application_fee</code> de Stripe). El Proveedor recibe el resto.</li>
+  <li>El Proveedor es el <em>merchant of record</em> (Stripe Connect, <em>direct charges</em>): las comisiones de procesamiento de Stripe (~2,9% + $0,30 por transacción) <strong>las paga el Proveedor</strong>, no la Plataforma.</li>
+  <li>MacLorian puede cambiar la comisión con <strong>60 días de aviso</strong> previo. El Proveedor puede salir antes de la fecha efectiva sin penalidad.</li>
 </ul>
 
 <h2 id="4">4. Bypass / cobro fuera de la plataforma</h2>
@@ -159,7 +160,7 @@ Ambas partes acuerdan los siguientes términos.
 <p>Excepciones permitidas: servicios <strong>completamente distintos</strong> a las categorías del Proveedor en la Plataforma (ej: si tu Plataforma cubre lawn care y el cliente te contrata aparte para mover muebles), o servicios prestados a clientes que el Proveedor ya tenía <strong>antes</strong> de su onboarding (con prueba documental).</p>
 <p><strong>Penalidades por bypass</strong>:</p>
 <ul>
-  <li>Primera vez: warning + cobro retroactivo de 10% sobre el monto no declarado.</li>
+  <li>Primera vez: warning + cobro retroactivo de la comisión que habría correspondido sobre el monto no declarado.</li>
   <li>Segunda vez: suspensión 30 días + cobro retroactivo + 25% recargo.</li>
   <li>Tercera vez: terminación de cuenta + reclamo legal por incumplimiento contractual y posible reclamo por enriquecimiento ilícito.</li>
 </ul>
