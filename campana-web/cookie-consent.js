@@ -37,10 +37,11 @@
     const banner = document.createElement('div');
     banner.id = 'mclx-cookie-banner';
     banner.setAttribute('role', 'dialog');
+    banner.setAttribute('aria-labelledby', 'mclx-cc-title');
     banner.innerHTML = `
       <div class="mclx-cc-inner">
         <div class="mclx-cc-text">
-          <strong>Usamos cookies</strong>
+          <strong id="mclx-cc-title">Usamos cookies</strong>
           <p>Las esenciales son necesarias para el sitio. Las de analytics y marketing son opcionales — vos elegís. Ver <a href="/privacy">Política de Privacidad</a>.</p>
         </div>
         <div class="mclx-cc-actions">
